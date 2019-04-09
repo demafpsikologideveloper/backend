@@ -24,15 +24,17 @@ yarn dev
 
 ## Admin
 
-| Endpoint           | Method | Description            | isAuthenticated | isAdmin |
-| ------------------ | ------ | ---------------------- | --------------- | ------- |
-| `/`                | GET    | Hello                  |                 |         |
-| `/buyers/register` | POST   | Register new buyer     |                 |         |
-| `/buyers/login`    | POST   | Login to buyer         |                 |         |
-| `/buyers/profile`  | GET    | Get buyer profile      | YES             |         |
-| `/buyers/:id`      | GET    | Get one buyer by id    |                 |         |
-| `/buyers`          | GET    | Get all buyers         |                 |         |
-| `/buyers/:id`      | DELETE | Delete one buyer by id | YES             |         |
+| Endpoint          | Method | Description           | isAuthenticated | isAdmin |
+| ----------------- | ------ | --------------------- | --------------- | ------- |
+| `/`               | GET    | Hello                 |                 |         |
+| `/users/register` | POST   | Register new user     |                 |         |
+| `/users/login`    | POST   | Login to user         |                 |         |
+| `/users/profile`  | GET    | Get user profile      | YES             |         |
+| `/users/:id`      | GET    | Get one user by id    |                 |         |
+| `/users`          | GET    | Get all users         |                 |         |
+| `/users/:id`      | DELETE | Delete one user by id | YES             |         |
+
+## Users
 
 | Endpoint     | Method | Description           |
 | ------------ | ------ | --------------------- |
