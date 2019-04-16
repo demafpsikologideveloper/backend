@@ -12,7 +12,8 @@
   "license": "ISC",
   "dependencies": {
     "express": "^4.16.4",
-    "knex": "^0.16.5"
+    "knex": "^0.16.5",
+    "mysql2": "^1.6.5"
   },
   "devDependencies": {
     "nodemon": "^1.18.11"
