@@ -1,15 +1,20 @@
-const express = require('express')
-const app = express()
-const port = 8000
+require('dotenv').config();
+const express = require('express');
+const bodyParser = require('body-parser');
+const app = express();
+const cors = require('cors');
+const port = process.env.PORT;
 
-// GET http://localhost:8000/
-
-app.get('/', (req, res) => {
- res.send('Hello World')
-})
-
+app.use(bodyParser());
+app.use(cors());
 
 app.listen(port, () => {
- console.log(`Express app is listening on localhost:${port}`);
+  console.log(`Express app is listening on localhost:${port}`);
+});
 
-})
+const root = require('./middlewares/index');
+const users = require('./middlewares/users');
+
+app.get('/', root.hello);
+// app.get('/users/', users.allUsers);
+app.post('/users/register', users.register);
