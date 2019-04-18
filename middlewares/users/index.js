@@ -8,12 +8,16 @@ const knex = require('knex')({
   }
 });
 module.exports = {
-  // allUsers: (req, res) => {
-  //   res.send({
-  //     message: 'List of all users',
-  //     user: user
-  //   });
-  // },
+  getAllUsers: async (req, res) => {
+    const getAllUsers = await knex
+      .select('id', 'username', 'email')
+      .from('users');
+
+    res.send({
+      message: 'List of all users',
+      users: getAllUsers
+    });
+  },
   register: async (req, res) => {
     const user = {
       username: req.body.username,

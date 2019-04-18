@@ -16,5 +16,5 @@ const root = require('./middlewares/index');
 const users = require('./middlewares/users');
 
 app.get('/', root.hello);
-// app.get('/users/', users.allUsers);
+app.get('/users/', users.getAllUsers);
 app.post('/users/register', users.register);
